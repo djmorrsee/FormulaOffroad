@@ -1,0 +1,10 @@
+# Ignore List for Unity3D 5.0
+
+# Auto Generated Folders (prefixed to not catch others)
+EndlessOffroadUnity/Library/
+EndlessOffroadUnity/Temp/
+
+# Auto Generated Files
+*.csproj
+*.sln
+*.userprefs
