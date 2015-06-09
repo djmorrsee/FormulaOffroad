@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Hill : MonoBehaviour {
 
+	public float minLength, maxLength, minRot, maxRot, minPieces, maxPieces;
 	public Transform hill, hillRot, endPos;
-	public GameObject[] hillPieces;
-	public float pMinH, pMaxH, pMaxRot;
+	public GameObject[] obstacles;
+	public GameObject obstaclesParent;
 
 }
