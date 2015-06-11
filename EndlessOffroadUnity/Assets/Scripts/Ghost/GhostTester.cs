@@ -5,6 +5,8 @@
 
 /*
     This file contains code for testing the ghost system.
+
+    It will be replaced in a real scene
 */
 
 

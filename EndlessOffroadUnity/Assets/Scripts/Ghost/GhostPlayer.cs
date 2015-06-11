@@ -53,6 +53,16 @@ public class GhostPlayer : MonoBehaviour
         }
     }
 
+
+    void Update ()
+    {
+        if (started)
+        {
+            gameObject.transform.position = Vector3.Slerp(lastPos, nextPos, (float)(thisSample) / (float)(GhostController.sampleRate) + Time.deltaTime);
+            gameObject.transform.rotation = Quaternion.Lerp(lastRot, nextRot, (float)thisSample / (float)(GhostController.sampleRate) + Time.deltaTime);
+        }
+    }
+
     void FixedUpdate()
     {
         if (started)
@@ -62,9 +72,8 @@ public class GhostPlayer : MonoBehaviour
                 SetForTick(thisTick++);
                 thisSample = 0;
             }
-            gameObject.transform.position = Vector3.Slerp(lastPos, nextPos, (float)thisSample / GhostController.sampleRate);
-            //gameObject.transform.eulerAngles = Vector3.Lerp(lastRot, nextRot, (float)thisSample / GhostController.sampleRate);
-			gameObject.transform.rotation = Quaternion.Lerp(lastRot, nextRot, (float)thisSample / GhostController.sampleRate);
+   //         gameObject.transform.position = Vector3.Slerp(lastPos, nextPos, (float)(thisSample) / (float)(GhostController.sampleRate));
+			//gameObject.transform.rotation = Quaternion.Lerp(lastRot, nextRot, (float)thisSample / (float)(GhostController.sampleRate));
         }
     }
 }

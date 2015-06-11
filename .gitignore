@@ -6,5 +6,6 @@ EndlessOffroadUnity/Temp/
 
 # Auto Generated Files
 *.csproj
+*.csproj.*
 *.sln
 *.userprefs
