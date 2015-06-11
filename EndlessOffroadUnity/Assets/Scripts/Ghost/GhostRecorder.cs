@@ -44,6 +44,6 @@ public class GhostRecorder : MonoBehaviour
     void SaveTick()
     {
         print(gameObject.transform.position);
-        ghostData.AddPoint(gameObject.transform.position, gameObject.transform.eulerAngles);
+        ghostData.AddPoint(gameObject.transform.position, gameObject.transform.rotation);
     }
 }

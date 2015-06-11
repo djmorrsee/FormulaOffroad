@@ -44,7 +44,7 @@ public class GhostTester : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > 3)
+        if (Time.time > 15)
         {
             StopGhosts();
             print("Done!");

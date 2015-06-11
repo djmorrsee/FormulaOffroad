@@ -30,7 +30,7 @@ public class GhostLoad : MonoBehaviour
             {
                 string[] values = line.Split(' ');
                 Vector3 pos = new Vector3(float.Parse(values[0]), float.Parse(values[1]), float.Parse(values[2]));
-                Vector3 rot = new Vector3(float.Parse(values[3]), float.Parse(values[4]), float.Parse(values[5]));
+                Quaternion rot = new Quaternion(float.Parse(values[3]), float.Parse(values[4]), float.Parse(values[5]), float.Parse(values[6]));
 
                 newGhost.AddPoint(pos, rot);
             }

@@ -21,7 +21,7 @@ public class GhostPlayer : MonoBehaviour
     int thisTick = 0;
 
     Vector3 lastPos, nextPos;
-    Vector3 lastRot, nextRot;
+    Quaternion lastRot, nextRot;
 
     public void PlayGhostFromFile(string filename)
     {
@@ -63,7 +63,8 @@ public class GhostPlayer : MonoBehaviour
                 thisSample = 0;
             }
             gameObject.transform.position = Vector3.Slerp(lastPos, nextPos, (float)thisSample / GhostController.sampleRate);
-            gameObject.transform.eulerAngles = Vector3.Slerp(lastRot, nextRot, (float)thisSample / GhostController.sampleRate);
+            //gameObject.transform.eulerAngles = Vector3.Lerp(lastRot, nextRot, (float)thisSample / GhostController.sampleRate);
+			gameObject.transform.rotation = Quaternion.Lerp(lastRot, nextRot, (float)thisSample / GhostController.sampleRate);
         }
     }
 }

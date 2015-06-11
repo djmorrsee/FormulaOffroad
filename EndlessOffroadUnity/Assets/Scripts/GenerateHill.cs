@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class GenerateHill : MonoBehaviour {
 
+	public bool useSeed;
+	public int seed;
 	public GameObject hillBase;
 	public Vector3 startPos, nextPos;
 	public int currentLevel;
@@ -12,6 +14,8 @@ public class GenerateHill : MonoBehaviour {
 	public GameObject currentHill, lastHill, hillToDelete;
 
 	void Start () {
+		if(useSeed)
+			Random.seed = seed;
 		nextPos = startPos;
 		Generate();
 	}
